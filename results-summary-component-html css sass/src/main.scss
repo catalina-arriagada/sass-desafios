@@ -1,0 +1,19 @@
+@import 'config';
+@import 'utils';
+@import 'button';
+@import 'class';
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-color-1;
+    min-width: 1440px;
+    display: grid;
+    grid-template-rows: 1080px 0px;
+    font-family: 'Hanken Grotesk', sans-serif;
+}

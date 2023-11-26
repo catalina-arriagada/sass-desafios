@@ -1,0 +1,176 @@
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 52%;
+    height: 45%;
+    margin: auto;
+    border-radius: 32px;
+    box-shadow: 5px 20px 17px 15px $shadow-color;
+
+    .results{
+        @include background();
+
+        .title-font-1{
+            font-size: 25px;
+            color: $font-color-5;
+            font-weight: 700;
+            text-align: center;
+            align-items: center;
+            padding: 40px 25px 30px;     
+        }
+
+        .circle{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-left: 90px;
+            background: linear-gradient($gradient-color-circle-1,
+                                        $gradient-color-circle-2);
+            .circle-text{
+                text-align: center;
+                padding: 45px 30px 0px 30px;
+                font-size: 70px;
+                font-weight: 800;
+                color: $background-color-1;
+            }
+            
+            .circle-text-small{
+                text-align: center;
+                font-size: 20px;
+                color: $gradient-color-background-1;
+            }
+            
+        }
+
+        .calification{
+            text-align: center;
+            margin-top: 30px;
+
+            .h1{
+                font-size: 32px;
+                color: $background-color-1;
+                font-weight: 500;
+            }
+
+            .p{
+                color: $font-color-5;
+                font-size: 18px;
+                padding: 15px 50px 0px 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+       
+    }  
+
+    .summary{
+        border-radius: 32px;
+        margin-left: 40px;
+        //box-shadow: 1px 1px 0px 0px black;
+
+        .title-font-2{
+            text-align: left;
+            font-size: 25px;
+            font-weight: 800;
+            color: $neutral-color;
+            padding: 40px 0px 0px;
+        }
+    
+        .reaction{ 
+            margin-top: 30px ;
+
+            .border-reaction{
+                @include border-summaries();
+                background-color: $background-color-op1;
+    
+                @include icon-summaries();
+    
+                .text-reaction{
+                    color: $font-color-1;
+                    @include text-summaries();
+                }
+    
+                @include scores();
+            }    
+        }
+    
+        .memory{
+            margin-top: 20px ;
+    
+            .border-memory{
+                @include border-summaries();
+                background-color: $background-color-op2;
+    
+                @include icon-summaries();
+    
+                .text-memory{
+                    color: $font-color-2;
+                    @include text-summaries();
+                }
+    
+                @include scores();
+            }    
+        }
+    
+        .verbal{
+            margin-top: 20px ;
+    
+            .border-verbal{
+                @include border-summaries();
+                background-color: $background-color-op3;
+    
+                @include icon-summaries();
+    
+                .text-verbal{
+                    color: $font-color-3;
+                    @include text-summaries();
+                    padding-right: 110px;
+                }
+    
+                @include scores();
+            }  
+        }
+    
+        .visual{
+            margin-top: 20px ;
+    
+            .border-visual{
+                @include border-summaries();
+                background-color: $background-color-op4;
+    
+                @include icon-summaries();
+    
+                .text-visual{
+                    color: $font-color-4;
+                    @include text-summaries();
+                    padding-right: 110px;
+                }
+    
+                @include scores();
+            }  
+        }
+    
+        @include continuebtn();
+    }
+}
+
+
+
+.clearfix{
+    overflow: auto;
+    clear: both;
+}
+
+.attribution {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
